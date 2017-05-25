@@ -15,9 +15,10 @@
 //
 
 // MARK: - Constants
+import FirebaseDatabaseUI
 
 struct Constants {
-
+    
     // MARK: NotificationKeys
     
     struct NotificationKeys {
@@ -25,10 +26,11 @@ struct Constants {
     }
     
     // MARK: MessageFields
-
+    
     struct MessageFields {
         static let name = "name"
         static let text = "text"
-        static let imageUrl = "photoUrl"
+        static let photoUrl = "photoUrl"
     }
 }
+
