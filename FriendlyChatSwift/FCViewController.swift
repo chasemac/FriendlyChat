@@ -200,10 +200,12 @@ class FCViewController: UIViewController, UINavigationControllerDelegate, UITabl
     
     // MARK: Send Message
     
-    func sendMessage(_ data: [String:String]) {
+    func sendMessage(_ data: [String:Any]) {
         var mdata = data
         // add name to message and then data to firebase database
         mdata[Constants.MessageFields.name] = displayName
+        mdata[Constants.MessageFields.date] = FIRServerValue.timestamp() as AnyObject
+
 
         ref.childByAutoId().setValue(mdata)
     }
